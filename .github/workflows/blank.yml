@@ -21,8 +21,11 @@ jobs:
       - name: Install PyInstaller
         run: pip install pyinstaller
 
+      - name: List files (debugging)
+        run: dir
+
       - name: Build executable
-        run: pyinstaller --onefile --windowed script.py
+        run: pyinstaller --onefile --windowed "Recibos a Excel.py"
 
       - name: Upload executable
         uses: actions/upload-artifact@v3
